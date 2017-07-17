@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  Object.deepFreeze=function(object){
+    Object.freeze(object)
+    Object.keys(object).forEach(function(key){
+    if (typeof(object[key])=='object')
+      return Object.deepFreeze(object[key])
+    })
+  }
+  const foo=Object.freeze({a:[1]})
+  foo.a.push(2)
+  console.info('a='+foo.a)
+  const foo2=Object.deepFreeze({a:[1]})
+  foo2.a.push(3)
+  console.info('foo2.a='+foo2.a)
+  </script>
+
+</body>
+</html>

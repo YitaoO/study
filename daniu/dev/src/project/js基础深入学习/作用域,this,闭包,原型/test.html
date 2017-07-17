@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+   foo:for(var i=0;i<4;i++){
+     for(var j=0;j<4;j++){
+       if(j ==i){
+         continue foo
+       }
+       if((j *i) %2 ==1){
+         continue
+       }
+       console.info(i,j)
+     }
+   }
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+/* ============================================================
+    字体基础样式（字体不应定义过多，只应该定义常用字体作为主题字体）
+============================================================ */
+.font-thin { //(20px)
+  font-size: .5rem;
+}
+
+.font-thinest { //(22px)
+  font-size: .55rem;
+}
+
+.font-default { //(24px)->基准字体
+  font-size: .6rem;
+}
+.font-defaultSecond{ //(26px)
+  font-size: .65rem;
+}
+
+.font-bold { //(28px)
+  font-size: .7rem;
+}
+
+.font-bolder { //(32px)->一般用于主标题
+  font-size: .8rem;
+}
+
+.font-boldest { //(36px)
+  font-size: .9rem;
+}

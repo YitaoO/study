@@ -1,0 +1,50 @@
+{
+  "name": "project",
+  "authors": [
+    "pzhang@ewaytec.cn",
+    "zszhang@ewaytec.cn",
+    "zqhe@ewaytec.cn",
+    "jbyan@ewaytec.cn"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+"dependencies": {
+    "audio": "http://gitlab.ewaytec.cn/frontend-components-team/audio.git#0.0.9",
+    "baidu-statistics": "http://gitlab.ewaytec.cn/frontend-components-team/baidu-statistics.git#0.0.1",
+    "dialog": "http://gitlab.ewaytec.cn/frontend-components-team/dialog.git#0.2.1",
+    "emoji": "http://gitlab.ewaytec.cn/frontend-components-team/emoji.git#0.1.4",
+    "jquery-touch": "http://gitlab.ewaytec.cn/frontend-components-team/jquery-touch.git#0.0.2",
+    "paginator": "http://gitlab.ewaytec.cn/frontend-components-team/paginator.git#0.7.6",
+    "photoswipe": "http://gitlab.ewaytec.cn/frontend-components-team/photoswipe.git#0.0.8",
+    "rem": "http://gitlab.ewaytec.cn/frontend-components-team/rem.git#0.0.5",
+    "swipe-slide": "http://gitlab.ewaytec.cn/frontend-components-team/swipe-slide.git#0.0.3",
+    "utils-url": "http://gitlab.ewaytec.cn/frontend-components-team/utils-url.git#0.0.1",
+    "waves": "http://gitlab.ewaytec.cn/frontend-components-team/waves.git#0.0.3",
+    "xss": "http://gitlab.ewaytec.cn/frontend-components-team/xss.git#0.0.1",
+    "swiper":"http://gitlab.ewaytec.cn/frontend-components-team/swiper.git#0.0.2",
+
+    "custom-ajax": "http://gitlab.ewaytec.cn/cap-frontend-team/custom-ajax.git#0.1.6",
+    "praise": "http://gitlab.ewaytec.cn/cap-frontend-team/praise.git#0.0.8",
+
+    "config": "http://gitlab.ewaytec.cn/cust-wicsg-frontend-team/config.git#0.1.3",
+    "mock-user": "http://gitlab.ewaytec.cn/cust-wicsg-frontend-team/mock-user.git#0.0.4",
+    "themes": "http://gitlab.ewaytec.cn/cust-wicsg-frontend-team/themes.git#0.2.0",
+    "user": "http://gitlab.ewaytec.cn/cust-wicsg-frontend-team/user.git#0.0.1",
+    "weixin": "http://gitlab.ewaytec.cn/cust-wicsg-frontend-team/weixin.git#0.2.2",
+     "tabs":"http://gitlab.ewaytec.cn/frontend-components-team/tabs.git#0.0.3"
+
+
+  },
+  "devDependencies": {
+    "scaffold-template": "http://gitlab.ewaytec.cn/cap-frontend-team/scaffold-template.git#0.0.2"
+  }
+}
