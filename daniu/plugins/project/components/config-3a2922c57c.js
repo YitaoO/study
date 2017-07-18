@@ -1,1 +1,0 @@
-var config={"debug":true,"userKey":"empUserInfo","interfaceUrls":[""],"clearMembers":"","clearKey":"clearMembers","oauthUrl":[],"baiduStatisticsCode":"27a86d583f2d785c9d6f72c5e9fe117f"}

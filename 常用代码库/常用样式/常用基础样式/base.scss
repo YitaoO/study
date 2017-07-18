@@ -1,0 +1,57 @@
+/* ============================================================
+    图标样式
+============================================================ */
+.icon { //icon图标基本样式
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  vertical-align: middle; }
+
+
+/* ============================================================
+    布局样式
+============================================================ */
+.icon-center{ //icon水平居中
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* ============================================================
+    其他样式
+============================================================ */
+.div:after { //after设置
+        font-size: .7rem;
+
+        padding-left: .2rem;
+
+        content: '>';
+}
+.robotItalic{ //通用Robot斜体字体
+  font-style: italic;
+}
+.ios-clickPoint{ //document委托时间解决ios兼容问题
+  cursor: pointer;
+}
+.textoverflowOne{ //超出部分省略
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.clear-fix { //清浮动
+    &:after {
+        clear: both;
+        content: '.';
+        display: block;
+        height: 0;
+        line-height: 0;
+        overflow: hidden;
+    }
+    *height: 1%;
+}

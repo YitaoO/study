@@ -1,0 +1,141 @@
+/* ============================================================
+     基础样式
+============================================================ */
+//全局样式
+$searchWrap-color: #CB036B;
+$searchLeft-color: #B4045F;
+$searchPlaceh-color: #FA5790;
+$searchInput-color: #FA90AC;
+$searchClose-color-bg: #F47294;
+$searchClose-border-color: #BA2247;
+$searchRight-color: #FFFFFF;
+$searchInput-font: .6rem;
+$searchRight-font: .6rem;
+
+//图片
+@mixin imageIconBg {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAYAAACpSkzOAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QzcyRkI0Q0U1RDVDMTFFNzlFM0E4NjdGRTQyMjg2NkYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QzcyRkI0Q0Y1RDVDMTFFNzlFM0E4NjdGRTQyMjg2NkYiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpDNzJGQjRDQzVENUMxMUU3OUUzQTg2N0ZFNDIyODY2RiIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpDNzJGQjRDRDVENUMxMUU3OUUzQTg2N0ZFNDIyODY2RiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Ph5mkUcAAAI/SURBVHjatNZPSFRRFMfxNzoZJFhEgjihURIYtqnUCBclJVRUVhhEFERYGKRgUVBBm2ghFCEu+iO1k6g0KaQi2rRq6I/0ZxHkIqRQQYQWZUWOfQ/8Bobpvpmn8zzw4c0Mj3fmvnPvPTeSuHDP84kS7EcDViCGfIzgHQZwF9+9AJHn+K0IV/BF14162HM9fBzbcQPDOIeCbImiad9Xoh+VGMQlPMaPtPsWoxFncRFbsRdjQUa0Gi9RgRNYh/uOJBYTuIVV6MAGxLE0W6JFeIhC7EAXEgFe/R+cQQvK0Yt5mRKdxzKcxFNv5nFd9axBq+uGCLPOhjuEN6jDtDe7WIDPmhhlmEwf0UHMx+Ucklj8xFUswU7Xq9ui7E+83OOBrptdiayIn/SPco0hrbMqV6JYpvk/ixjTOvsv0ZRNihATWb1/uRINa5GGEQUqxVdXorg2zfIQEtVpwcZdifr0+UgIiY7q2udKZDvyB7ShNIck1diHZ/joNxlOqz30BtnyHVGMHvzGqUx7nS3WTqzXsItmkCSmVpLc9d9naxPt6FZTe4VtAZqmbV+vsVa/VfktldTGZ6+wWW26Q7UbVCO0WfQNfzU7N2G3GqX1psPSpnbfmr5vRnzODGXqMwew0GdEo7it9jCu3fsR6nENx1OTRTIcTpKrvBbLVYuEErxVLaYdraJfG/VNHEveE81SB5tFLyRoq9ilCdWs59t1Ks8LPyZ1cBlQ3exskR/15ibsTeyB1eXQXI0o9eDShDtY80+AAQATyYDPCU9EeAAAAABJRU5ErkJggg==);
+}
+
+//基础样式
+.search-grid-list {
+    display: table;
+
+    box-sizing: border-box;
+    width: 100%;
+}
+.search-grid-list-item {
+    display: table-cell;
+
+    vertical-align: middle;
+}
+.search-hide {
+    display: none;
+}
+
+
+
+/* ============================================================
+     整体布局
+============================================================ */
+.searchTop {
+    box-sizing: border-box;
+    height: 2rem;
+    padding: .25rem .5rem;
+
+    background-color: $searchWrap-color;
+}
+.search-left {
+    display: inline-block;
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 2px;
+    background-color: $searchLeft-color;
+}
+.search-left .search-form {
+    height: 100%;
+}
+.search-form .form-icon {
+    width: 1rem;
+    .icon-search {
+        display: inline-block;
+
+        width: .7rem;
+        height: .7rem;
+        margin-top: .1rem;
+        margin-right: .4rem;
+        margin-left: .4rem;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include imageIconBg;
+    }
+}
+.search-form .form-input {
+    width: 12rem;
+
+    .search-input::-webkit-input-placeholder {
+        color: $searchPlaceh-color;
+    }
+    .search-input {
+        line-height: 1.4rem;
+
+        width: 100%;
+
+        color: $searchInput-color;
+    }
+}
+.search-form .form-close {
+    .btn-clear {
+        display: block;
+
+        width: .8rem;
+        height: .8rem;
+
+        transform: rotate(45deg);
+        vertical-align: middle;
+
+        border-radius: .8rem;
+        background-color: $searchClose-color-bg;
+        .line-right {
+            position: absolute;
+            top: 7px;
+            right: 4px;
+
+            content: '';
+
+            border: 1px solid transparent;
+            border-color: $searchClose-border-color;
+            border-left-width: 7px;
+        }
+        .line-left {
+            position: absolute;
+            top: 4px;
+            right: 7px;
+
+            content: '';
+
+            border: 1px solid transparent;
+            border-color: $searchClose-border-color;
+            border-top-width: 7px;
+        }
+    }
+}
+
+.search-right {
+    font-size: $searchRight-font;
+    line-height: 1.5rem;
+
+    float: right;
+
+    width: 10%;
+    height: 1.5rem;
+
+    text-align: right;
+
+    color: $searchRight-color;
+}
