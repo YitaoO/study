@@ -56,3 +56,14 @@ data.timer = setInterval(function() {
          $(changeId).text(currentTexNum + '/' + maxTexNum);
      });
  }
+
+ //光标定位到最后一位，解决contenteditable="true"下截取字符光标跑到首位问题
+function keyAction(obj) {
+    var textbox = document.getElementById('textarea');
+    var sel = window.getSelection();
+    var range = document.createRange();
+    range.selectNodeContents(textbox);
+    range.collapse(false);
+    sel.removeAllRanges();
+    sel.addRange(range);
+}
