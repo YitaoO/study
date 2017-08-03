@@ -1,0 +1,10 @@
+<script type="text/html" id="templateData">
+    {{each list}}
+    <div class="rank-list rank-grid-list">
+        <span class="rank-grid-list-item span-rank">{{$value.rank}}</span>
+        <span class="rank-grid-list-item span-score">{{$value.integral}}</span>
+        <span class="rank-grid-list-item span-user">{{$value.empName}}</span>
+        <span class="rank-grid-list-item span-group">{{$value.groupName}}</span>
+    </div>
+    {{/each}}
+</script>

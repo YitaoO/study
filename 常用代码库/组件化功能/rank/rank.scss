@@ -1,0 +1,179 @@
+/* ================================================================================
+    排行榜样式
+================================================================================ */
+/* ------------------------------------------------------------
+    公共
+------------------------------------------------------------ */
+.rank-overlay {
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, .6);
+}
+
+.rank-grid-list {
+    display: table;
+
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.rank-grid-list-item {
+    display: table-cell !important;
+
+    vertical-align: middle;
+}
+
+.rank-wrap {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 13rem !important;
+    height: 17rem !important;
+    margin: auto;
+    padding: 10px;
+
+    border: 2px solid #8ADAEA;
+    border-radius: 21px;
+    background: #DBF9FF;
+}
+.tips {
+    z-index: 1000 !important;
+}
+
+/* ------------------------------------------------------------
+    头部
+------------------------------------------------------------ */
+.rank-top-title {
+    font-size: pxToRem(30);
+    line-height: 2rem;
+
+    height: 2rem;
+
+    text-align: center;
+
+    color: #FF5959;
+    border-radius: 15px 12px 0 0;
+    background: url(./images/rank-titleBg.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+/* ------------------------------------------------------------
+    内容
+------------------------------------------------------------ */
+.rank-content {
+    background: #FFFFFF;
+}
+
+.rank-title,
+.rank-list {
+    font-size: .7rem;
+
+    padding: .5rem 1rem;
+
+    text-align: center;
+
+    color: #383737;
+    .span-rank {
+        width: 2rem;
+    }
+    .span-score {
+        width: 3rem;
+    }
+    .span-user {
+        width: 3rem;
+    }
+    .span-group {
+        width: 2rem;
+    }
+}
+
+.rank-list {
+    font-size: .7rem;
+
+    color: #FF5959;
+}
+
+.rank-data {
+    overflow: auto;
+
+    height: 10rem;
+}
+
+/* ------------------------------------------------------------
+    按钮
+------------------------------------------------------------ */
+.close-btn {
+    position: absolute;
+    top: -.8rem;
+    right: -.8rem;
+
+    width: 2.4rem;
+    height: 2.4rem;
+
+    background: url(./images/rank_close.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.rank-bottom {
+    padding: 0rem;
+    .button-img {
+        box-sizing: border-box;
+        width: 1.95rem;
+        height: 1.5rem;
+        padding: 5px;
+    }
+    .button-Home span {
+        width: 100%;
+        height: 100%;
+
+        background: url(./images/rank-HomeBtn.png) no-repeat;
+        background-size: 100% 100%;
+    }
+
+    .button-pre span {
+        width: 100%;
+        height: 100%;
+
+        background: url(./images/rank-preBtn.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    .button-next span {
+        width: 100%;
+        height: 100%;
+
+        background: url(./images/rank-nextBtn.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    .button-end span {
+        width: 100%;
+        height: 100%;
+
+        background: url(./images/rank-endBtn.png) no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+.rank-footer {
+    font-size: .7rem;
+
+    padding: .5rem;
+
+    text-align: center;
+
+    color: #1DAD9D;
+    .rank-bestRank,
+    .rank-how {
+        font-size: .6rem;
+    }
+}
