@@ -6,7 +6,7 @@
 ------------------------------------------------------------ */
 .rank-overlay {
     position: absolute;
-    z-index: 999;
+    z-index: 10000;
     top: 0;
     bottom: 0;
     left: 0;
@@ -32,7 +32,7 @@
 
 .rank-wrap {
     position: fixed;
-    z-index: 1000;
+    z-index: 10000;
     top: 0;
     right: 0;
     bottom: 0;
@@ -78,23 +78,24 @@
 .rank-title,
 .rank-list {
     font-size: .7rem;
+    // padding: .5rem 1rem;
 
-    padding: .5rem 1rem;
+    padding: .5rem .5rem;
 
     text-align: center;
 
     color: #383737;
     .span-rank {
-        width: 2rem;
+        width: 1.5rem;
     }
     .span-score {
-        width: 3rem;
+        width: 2.5rem;
     }
     .span-user {
         width: 3rem;
     }
     .span-group {
-        width: 2rem;
+        width: 3rem;
     }
 }
 

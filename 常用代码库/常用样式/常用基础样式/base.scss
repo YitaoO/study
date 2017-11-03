@@ -55,3 +55,18 @@
     }
     *height: 1%;
 }
+
+li.active:after { //tab切换样式
+        position: absolute;
+        right: 0;
+        bottom: -1px;
+        left: 0;
+
+        display: block;
+
+        height: 2px;
+
+        content: '';
+
+        background: #FF1F58;
+    }

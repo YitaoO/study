@@ -44,7 +44,7 @@ class rank {
             });
         }).then(function(data) {
             $('.rank-data').html(template('templateData', data));
-            $('.rank-bestRank').text(data.maxEmpName);
+            $('.rank-bestRank').text(data.maxIntegral);
             $('.rank-how').text(data.maxOrderNo);
         }).catch(function(ErrMsg) {
             //获取数据失败时的处理逻辑

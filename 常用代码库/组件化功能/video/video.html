@@ -1,0 +1,10 @@
+<!-- 模板 - 活动描述 -->
+<script type="text/html" id="template-detail-des">
+    {{if video}}
+    <div class="video_container">
+        <div class="videoBg" style="background: url('{{videoCover}}') no-repeat;background-position: center center;background-size: cover;">
+            <span class="play"></span>
+        </div>
+    </div>
+    <video id="myVideo" src="{{video}}" class="detail-des-video" controls preload="auto" webkit-playsinline style="display:none;"></video> {{/if}}
+</script>

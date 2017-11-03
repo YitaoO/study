@@ -1,4 +1,5 @@
 .slider-box {
+  overflow: hidden; //为了防止移动端页面滑动
     background: #ffffff;
     position: relative;
 }
