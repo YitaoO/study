@@ -1,0 +1,11 @@
+{
+  "name": "utilsUrl",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "fis build"
+  },
+  "author": "",
+  "license": "MIT"
+}
