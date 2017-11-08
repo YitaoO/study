@@ -1,4 +1,16 @@
 /**
+ * 方法说明
+ * data.timer 倒计时
+ * documentTitle 设置标题
+ * listenNum 字体数量监听通用方法
+ * allShow 文字太多隐藏和显示
+ * defaultHead 非默认头像背景图加载
+ * inputListen 数字监听
+ * counteDecimals 如果超过五位数，保留两位小数
+ *
+ */
+
+/**
  * 倒计时
  */
 let backTime = 10;
@@ -66,4 +78,88 @@ function keyAction(obj) {
     range.collapse(false);
     sel.removeAllRanges();
     sel.addRange(range);
+}
+/**
+ * [defaultHead 文字太多隐藏和显示]
+ */
+function allShow() {
+    $.each($('.content_body'), (key, item) => {
+        if (item.clientHeight > 36) {
+            $(item).addClass('content_limit')
+
+            $(item).parent().find('.open_all').bind('click', function() {
+                $(item).toggleClass('content_limit')
+                let showIcon = $(this).find('.icon').hasClass('icon-show')
+                if (!!showIcon) {
+                    $(this).find('.icon').removeClass('icon-show').addClass('icon-hide')
+                } else {
+                    $(this).find('.icon').removeClass('icon-hide').addClass('icon-show')
+                }
+
+            }).show()
+        } else {
+            $(item).parent().find('.open_all').hide()
+        }
+    })
+}
+/**
+ * [defaultHead 非默认头像背景图加载]
+ */
+function defaultHead() {
+    $('[data-bg-src-small], [data-bg-src-big]').each(function() {
+        var lock = $(this).attr('data-src-lock');
+
+        if (lock) {
+            return;
+        }
+
+        var $wrapper = $(this);
+
+        var type = $wrapper.data('bg-src-big') ? 'big' : 'small';
+
+        var timer = setTimeout(function() {
+            if ($wrapper[0].className.indexOf('head') > -1) {
+                $wrapper.addClass('empty-head-img-' + type);
+            } else {
+                $wrapper.addClass('empty-img-' + type);
+            }
+        }, 300);
+
+        var src = $wrapper.data('bg-src-' + type);
+
+        var image = new Image();
+        image.src = src;
+
+        image.onload = function() {
+            clearTimeout(timer);
+            $wrapper.css('background-image', 'url(' + image.src + ')');
+            $wrapper.addClass('fadeIn animated-faster');
+        };
+    });
+}
+/**
+ * 用途：如果超过五位数，保留两位小数
+ */
+function counteDecimals(count) {
+    let returnCount
+    let stringCount = count.toString()
+    if (stringCount.length > 4) {
+        let newInt = stringCount.substring(0, stringCount.length - 4)
+        let newDec = stringCount.substring(stringCount.length - 4)
+        let count = Number(`${newInt}.${newDec}`).toFixed(2)
+        returnCount = `${count}万`
+    } else {
+        returnCount = count
+    }
+
+    return returnCount
+
+}
+/**
+ * 数字监听
+ */
+function inputListen() {
+    $('.search-input').bind('input propertychange', function() {
+        console.log($('input').val());
+    });
 }
