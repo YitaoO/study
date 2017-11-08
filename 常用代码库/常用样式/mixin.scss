@@ -1,0 +1,79 @@
+/* ================================================================================
+    用于定义一些mixin样式(把全局要用的东西尽量放在这里)
+================================================================================ */
+/* ------------------------------------------------------------
+    公共
+------------------------------------------------------------ */
+@mixin list-border-bottom {
+    //列表底部边框颜色
+    border-bottom: 1px solid #E8E8E9;
+}
+@mixin list-margin-top {
+    //列表头部边距
+    margin-top: .5rem;
+}
+@mixin list-margin-bottom {
+    //列表底部边距
+    margin-bottom: .5rem;
+}
+@mixin clear-float {
+    //清除浮动
+    clear: both;
+}
+@mixin oneLine {
+    //一行显示
+    overflow: hidden;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    -webkit-line-clamp: 1;
+}
+@mixin twoLine {
+	  //两行显示
+    display: -webkit-box;
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+@mixin headerImg {
+	  //头像样式
+    display: inline-block;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 40px;
+    // background-image: url('./assets/images/default_avatar_icon.png');
+    background-size: 100% 100%;
+}
+@mixin headerImg-big {
+		//头像样式
+    display: inline-block;
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50px;
+    // background-image: url('./assets/images/default_avatar_icon.png');
+    background-size: 100% 100%;
+}
+
+@mixin showImage($image) {
+	  // 引入图片
+    background: url(./component/game/css/#{$image}.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+/* ------------------------------------------------------------
+    块状
+------------------------------------------------------------ */
+@mixin block-wrap {
+	  //列表布局
+    padding: .5rem;
+
+    background: #FFFFFF;
+}
