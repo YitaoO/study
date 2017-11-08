@@ -1,0 +1,21 @@
+<!-- 广告 - 幻灯片 -->
+<script type="text/html" id="tempalte-index-ad">
+    <div class="slider">
+        <ul class="slider-page">
+            {{each}}
+            <li class="slider-page">
+                <div class="empty-img-big ad-title toAd" data-id="{{$value.id}}" data-url="{{$value.linkUrl}}" style="background-image: url({{$value.adPic}});background-size: 100% 100%;"></div>
+            </li>
+            {{/each}}
+        </ul>
+
+        <div class="sub-pannel grid-list">
+            <!-- <div class="indicators "> -->
+            {{each}}
+            <span class="indicator {{$index === 0 ? 'sel' : ''}}"></span> {{/each}}
+            <!-- </div> -->
+
+        </div>
+
+    </div>
+</script>

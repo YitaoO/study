@@ -1,0 +1,83 @@
+/* ================================================================================
+    广告
+================================================================================ */
+
+.slider-box {
+    position: relative;
+
+    overflow: hidden;
+
+    height: rem(180);
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    transform: translate3d(0, 0, 0);
+
+    .slider-page {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .sub-pannel {
+        position: absolute;
+        bottom: 0;
+
+        box-sizing: border-box;
+        width: 100%;
+
+        text-align: center;
+
+        .indicator {
+            display: inline-block;
+
+            width: 6px;
+            height: 6px;
+            margin-right: .2rem;
+
+            vertical-align: middle;
+
+            border-radius: 2px;
+            background: rgba(255, 255, 255, .7);
+        }
+        .sel {
+            width: 6px;
+            height: 6px;
+
+            border-radius: 3px;
+            background-color: rgba(250, 75, 87, 1);
+        }
+    }
+}
+
+.catchline-text {
+    font-size: .75rem;
+
+    color: #FFFFFF;
+}
+
+.indicators {
+    display: table-cell;
+}
+
+.slider .empty-img-big {
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
