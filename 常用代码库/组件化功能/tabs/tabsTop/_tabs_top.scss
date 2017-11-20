@@ -1,0 +1,44 @@
+/* ================================================================================
+    头部tabs样式
+================================================================================ */
+
+/* ------------------------------------------------------------
+    公共
+------------------------------------------------------------ */
+.tab-wrap {
+    padding: 0rem .5rem;
+
+    background: #FFFFFF;
+
+    @include list-border-bottom;
+}
+
+.tabItem {
+    font-size: 14px;
+
+    position: relative;
+
+    height: 2rem;
+
+    text-align: center;
+}
+
+.tabItem.active {
+    color: #333333;
+}
+.tabItem.active:after {
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+
+    display: block;
+
+    width: 4rem;
+    height: 2px;
+    margin: auto;
+
+    content: '';
+
+    background: #17B0D4;
+}

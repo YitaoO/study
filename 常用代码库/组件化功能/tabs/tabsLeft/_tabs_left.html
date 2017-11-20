@@ -1,0 +1,12 @@
+<!-- 模板 - 左边tabs -->
+<script type="text/html" id="template_left_tabs">
+    <div class="tab-wrap grid-list">
+        <ul class="wrap-tab grid-list-item tab{{type}}" data-type="{{type}}">
+            <li class="tabItem ios-clickPoint">{{type ==1?'众筹项目':'众筹社区热门话题'}}</li>
+            <li class="tabItem ios-clickPoint">{{type ==1?'创新项目':'创客社区热门话题'}}</li>
+        </ul>
+        <div class="wrap-more toMore iosClick toMore{{type}}" id="toMoreProject" data-type="{{type}}">
+            更多<i class="icon icon-right-arrow "></i>
+        </div>
+    </div>
+</script>

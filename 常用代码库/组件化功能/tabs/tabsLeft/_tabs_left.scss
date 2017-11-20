@@ -1,0 +1,70 @@
+/* ================================================================================
+    tabs样式
+================================================================================ */
+
+/* ------------------------------------------------------------
+    公共
+------------------------------------------------------------ */
+.tab-wrap {
+    @include block-wrap;
+}
+.wrap-tab {
+    @include list-border-bottom;
+    @include clear-float;
+
+    li {
+        font-size: 14px;
+
+        position: relative;
+
+        display: table-cell;
+
+        box-sizing: border-box;
+        width: 4rem;
+        height: 2rem;
+
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    li.active {
+        color: #333333;
+    }
+    li.active:after {
+        position: absolute;
+        right: 0;
+        bottom: -1px;
+        left: 0;
+
+        display: block;
+
+        width: 4rem;
+        height: 2px;
+        margin: auto;
+
+        content: '';
+
+        background: #17B0D4;
+    }
+}
+.tab2 .tabItem {
+    width: 6.5rem !important;
+}
+.tab2 .tabItem.active:after {
+    width: 6rem !important;
+}
+.wrap-more {
+    font-size: .5rem;
+
+    display: table-cell;
+
+    text-align: right;
+    vertical-align: middle;
+
+    color: #666666;
+
+    @include list-border-bottom;
+}
+.toMore2 {
+    display: none !important;
+}

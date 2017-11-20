@@ -7,6 +7,9 @@
  * defaultHead 非默认头像背景图加载
  * inputListen 数字监听
  * counteDecimals 如果超过五位数，保留两位小数
+ * coverImage  详情头部设置图片
+ * arrToString 数组转字符串
+ * strToArray  字符串转数组
  *
  */
 
@@ -162,4 +165,39 @@ function inputListen() {
     $('.search-input').bind('input propertychange', function() {
         console.log($('input').val());
     });
+}
+/**
+ * [coverImage  详情头部设置图片]
+ */
+function coverImage(image){
+  // 创建对象 这里面是为了防止图片很大变形
+          var img = new Image();
+          // 改变图片的src
+          img.src = image;
+          img.onload = function() {
+              $('#audio-box').html(template('templateAudio', result))
+              if ((img.height > img.width) || img.height > 500) {
+                  $('.audio').css("background-size", "contain")
+                  $('.audio').css('background-repeat', 'no-repeat')
+              } else {
+                  $('.audio').css('background-size', 'cover')
+                  $('.audio').css('background-repeat', 'no-repeat')
+              }
+          }
+}
+/**
+ * [stringToArr 数组转字符串]
+ * @param  {[type]} arr [数组]
+ * @return {[type]}     [返回字符串]
+ */
+function arrToString(arr){
+    return arr.join(',')
+}
+/**
+ * [stringToArr 字符串转数组]
+ * @param  {[type]} str [字符串]
+ * @return {[type]}     [返回数组]
+ */
+function strToArray(str){
+    return str.split(",");
 }
