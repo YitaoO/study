@@ -1,5 +1,15 @@
 /**
  * javascript编写时必须遵守以下规范
+ * 一:const和let
+ * 二:对象
+ * 三:数组
+ * 四:解构赋值(Destructuring)
+ * 五:字符串(string)
+ * 六:箭头函数(Arrow Functions)
+ * 七:方法(function)
+ * 八:class(类)
+ * 九:Modules
+ *
  */
 
  /**
@@ -146,7 +156,7 @@ function returnObj(input){
 const {left,bottom} =returnObj(input)
 
 /**
- * 四：字符串(string)
+ * 五：字符串(string)
  */
 //1:使用单引号
 const name="aaa" //bad
@@ -160,7 +170,7 @@ function say(name){
 document.write(eval(x+17)) //bad
 
 /**
- * 五：方法(function)
+ * 六：方法(function)
  */
 //1:使用函数声明代替函数表达式（函数声明在声明那一刻就放在作用域中，调用的时候在堆栈汇总更容易识别）
 const foo = function(){} //bad
@@ -205,7 +215,7 @@ const f = function(){};const g function function (){};const h = function() {};//
 const f = function () {};//good
 
 /**
- * 箭头函数(Arrow Functions)
+ * 七:箭头函数(Arrow Functions)
  */
 //1:当必须使用函数表达式或者匿名函数的时候，请使用箭头函数
 [1,2,3].map(function(x)){
@@ -229,6 +239,109 @@ const f = function () {};//good
 })//good
 
 /**
- * class(类)
+ * 八:class(类)
  */
 //1:使用class，避免去直接操作原型prototype
+function Queue(contents=[]){
+     this.queue=[...contents]
+}
+Queue.prototype.pop=function(){
+	const vale=this.queue[0];
+	this.queue.splice(0,1);
+	return vale
+}//bad
+class Queue {
+	constructor(contents=[]) {
+		this.queue=[...contents]
+	}
+	pop(){
+		const vale=this.queue[0];
+		this.queue.splice(0,1);
+		return vale
+	}
+} //good
+//2:使用继承(extends)
+class student extends Persons {
+	constructor() {
+
+	}
+}
+//3:constructor默认方法不需要一定写，不要重复定义方法在class中
+
+/**
+ * 九：Modules(模块es6)
+ */
+
+/**
+* 十:Properties(性能)
+*/
+//1:当访问对象属性的时候用点记法,不要用数组的key访问方法
+const luke={
+	jedi:true,
+	age:25
+}
+const age=luke['age'] //bad
+const age=luke.age //good
+
+/**
+* 十一:运算符
+*/
+//1:使用=== !== 代替 == !=
+//2:条件语句判断表达式时，转为布尔值的规则如下
+Objects->true
+Undefined,Null->false
+Booleans->不变
+Number(+0;-0;null)->false ;//其他情况为true
+String(空字符串)->false //否则为true
+//3:条件语句使用简短模式判断,如果是字符串或者数字就使用完整模式
+if(isValue === true){}//bad
+if(isValue){}//good
+if(name){} //bad
+if(name !=='')//good
+//4:使用switch的时候在条件中要加括号
+switch (foo) {
+	case 1:
+		let x=1;
+		break;
+	case 2:
+		let y=2;
+		break;
+	default:
+} //bad
+switch (foo) {
+	case 1:{
+		let x=1;
+		break;
+	}
+	case 2:{
+		let y=2;
+		break;
+	}
+	default:
+} //good
+
+
+
+/**
+ * 九...(扩展运算符用法):将一个数组转化为用逗号分隔的参数序列
+ */
+//1:函数调用
+function add(x,y){
+	return x + y
+}
+let number=[2,5] //将一个数组，变为参数序列
+add(...number)
+//2:替代apply方法
+Math.max.apply(null,[1,2,4])//由于js吧不提供求数组最大的函数，所以只能嵌套在Maxt.max中
+Math.max(...[1,2,3])//es6
+//3:往数组的尾部添加东西
+let arr1=[1,2,3];
+let arr2=[4,5,6];
+Array.prototype.push.apply(arr1,arr2) //es5
+arr1.push(...arr2); //es6
+//合并数组
+[1,2].concat([4,5]) //es5
+[1,2,...[6,7]] //es6
+//函数返回值：js返回值只能一个，扩展运算符可以返回多个
+//字符串转为数组
+[...'hello'] //['h','e','l','l','o']
