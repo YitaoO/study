@@ -1,0 +1,78 @@
+{
+  "_args": [
+    [{
+        "raw": "generator-wb@^1.2.5",
+        "scope": null,
+        "escapedName": "generator-wb",
+        "name": "generator-wb",
+        "rawSpec": "^1.2.5",
+        "spec": ">=1.2.5 <2.0.0",
+        "type": "range"
+      },
+      "/Users/huangyitao/Documents/project/fls.git"
+    ]
+  ],
+  "_from": "generator-wb@>=1.2.5 <2.0.0",
+  "_id": "generator-wb@1.4.1",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/fls/generator-wb",
+  "_nodeVersion": "6.10.3",
+  "_npmUser": {},
+  "_npmVersion": "3.10.10",
+  "_phantomChildren": {
+    "color-convert": "1.9.0",
+    "escape-string-regexp": "1.0.5",
+    "through2": "2.0.3"
+  },
+  "_requested": {
+    "raw": "generator-wb@^1.2.5",
+    "scope": null,
+    "escapedName": "generator-wb",
+    "name": "generator-wb",
+    "rawSpec": "^1.2.5",
+    "spec": ">=1.2.5 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/fis"
+  ],
+  "_resolved": "",
+  "_shasum": "09cdd0cf1f02be0f9707395d4e1187be95d92f81",
+  "_shrinkwrap": null,
+  "_spec": "generator-wb@^1.2.5",
+  "_where": "/Users/huangyitao/Documents/project/fwbs.git",
+  "author": "",
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "gulp": "^3.9.1",
+    "gulp-filter": "^5.0.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-tap": "^1.0.1",
+    "yeoman-generator": "^1.1.1",
+    "yo": "^2.0.0"
+  },
+  "description": "yo-generaoter-app",
+  "devDependencies": {},
+  "dist": {
+    "shasum": "09cdd0cf1f02be0f9707395d4e1187be95d92f81",
+    "tarball": ""
+  },
+  "files": [
+    "app"
+  ],
+  "gitHead": "39928d808cbdfe9eb96672f5ce9991515902d0de",
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "license": "MIT",
+  "main": "app/index.js",
+  "name": "generator-wb",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "readmeFilename": "README.md",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}
