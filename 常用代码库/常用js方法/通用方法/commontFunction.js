@@ -10,7 +10,8 @@
  * coverImage  详情头部设置图片
  * arrToString 数组转字符串
  * strToArray  字符串转数组
- *
+ * reloadIos 微信返回键ios刷新
+ * listenNum 数字监听高级
  */
 
 /**
@@ -200,4 +201,18 @@ function arrToString(arr){
  */
 function strToArray(str){
     return str.split(",");
+}
+/**
+ * 微信返回键ios刷新
+ */
+function reloadIos(){
+  var isPageHide = false;
+    window.addEventListener('pageshow', function() {
+        if (isPageHide) {
+            window.location.reload();
+        }
+    });
+    window.addEventListener('pagehide', function() {
+        isPageHide = true;
+    });
 }

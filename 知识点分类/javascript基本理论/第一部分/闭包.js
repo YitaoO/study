@@ -2,15 +2,48 @@
     此JS用于总结闭包的一些概念和代码解释（*代表重要的程度）
 ============================================================ */
 
-function foo(){
-  var a=2;
-  function bar(){
-    console.info(a)
+//1:当函数可以记住并访问所在的词法作用域时，就产生了闭包，即使函数是在当前词法作用 域之外执行。
+//2:如果将函数(访问它们各自的词法作用域)当作第一 级的值类型并到处传递，你就会看到闭包在这些函数中的应用
+
+
+//闭包例子
+//闭包例子
+{
+  function foo(){
+    var a=2;
+    function bar(){
+      console.info(a)
+    }
+    bar()
   }
-  bar()
+  var baz= foo()
+  baz() //输出2
 }
-var baz= foo()
-baz() //输出2
+{
+  var fn;
+  function foo() {
+    var a = 2;
+    function baz() {
+      console.log( a );
+    }
+    fn = baz; // 将 baz 分配给全局变量 }
+  function bar() {
+    fn(); // 妈妈快看呀，这就是闭包!
+     }
+  foo();
+  bar(); // 2
+
+}
+{
+  function wait(message) {
+     setTimeout( function timer() {
+       console.log( message );
+   }, 1000 );
+ }
+ wait( "Hello, closure!" );
+}
+
+
 
 //1:本来函数作用域在foo()执行后就会被销毁，可是bar()继续使用这个作用域，所以不会被释放
 //2:bar()继续保持对这个作用域的引用，这个引用就叫做闭包
